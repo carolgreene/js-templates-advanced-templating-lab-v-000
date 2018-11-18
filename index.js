@@ -8,5 +8,3 @@ document.getElementById('main').innerHTML = formTemplateFn({ingredients: ['','',
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
 })
-
-
