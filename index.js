@@ -21,6 +21,7 @@ function handleSubmit() {
   recipe.ingredients = [];
   for(var i = 0 ; i < ingredientNodes.length ; i++) {
     recipe.ingredients.push(ingredientNodes[i].value);
+  }
   var recipeTemplate = document.getElementById('recipe-template').innerHTML;
   var recipeTemplateFn = Handlebars.compile(recipeTemplate);
   document.getElementById('main').innerHTML = recipeTemplateFn(recipe);
