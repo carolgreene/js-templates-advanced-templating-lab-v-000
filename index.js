@@ -18,7 +18,7 @@ function handleSubmit() {
   let recipe = {}
   let nameNode = document.getElementById('name');
   let descriptionNode = document.getElementById('description');
-  let ingredientNodes = document.getElementsByName('ingredients');
+  var ingredientNodes = document.getElementsByName('ingredients');
   //set attribute values
   recipe.name = nameNode.value;
   recipe.description = descriptionNode.value;
