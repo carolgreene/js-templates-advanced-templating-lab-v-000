@@ -40,8 +40,8 @@ function displayEditForm() {
   for(var i = 0; i < ingredientNodes.length; i++) {
     recipe.ingredients.push(ingredientNodes[i].innerHTML);
   }
-  let recipeTemplate = document.getElementById('recipe-template').innerHTML;
-  let recipeTemplateFn = Handlebars.compile(recipeTemplate);
+  let recipeFormTemplate = document.getElementById('recipe-form-template').innerHTML;
+  let recipeFormTemplateFn = Handlebars.compile(recipeFormTemplate);
   document.getElementById('main').innerHTML = recipeTemplateFn(recipe)
 }
 
