@@ -11,10 +11,10 @@ Handlebars.registerHelper('displayIngredient', function(ingredient) {
 
 function handleSubmit() {
   //set variables from form
-  var recipe = {}
-  var nameNode = document.getElementById('name');
-  var descriptionNode = document.getElementById('description');
-  var ingredientNodes = document.getElementsByName('ingredients');
+  let recipe = {}
+  let nameNode = document.getElementById('name');
+  let descriptionNode = document.getElementById('description');
+  let ingredientNodes = document.getElementsByName('ingredients');
   //set attribute values
   recipe.name = nameNode.value;
   recipe.description = descriptionNode.value;
