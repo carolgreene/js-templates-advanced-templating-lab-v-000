@@ -10,24 +10,23 @@ Handlebars.registerHelper('displayIngredient', function(ingredient) {
 }
 
 
+
+
 function handleSubmit() {
-  //set variables from form
   var recipe = {}
   var nameNode = document.getElementById('name');
   var descriptionNode = document.getElementById('description');
   var ingredientNodes = document.getElementsByName('ingredients');
-  //set attribute values
   recipe.name = nameNode.value;
   recipe.description = descriptionNode.value;
   recipe.ingredients = [];
-  for(var i = 0; i < ingredientNodes.length; i++) {
+  for(var i = 0 ; i < ingredientNodes.length ; i++) {
     recipe.ingredients.push(ingredientNodes[i].value);
   }
-  let recipeTemplate = document.getElementById('recipe-template').inner.HTML;
-  let recipeTemplateFn = Handlebars.compile(recipeTemplate);
+  var recipeTemplate = document.getElementById("recipe-template").innerHTML;
+  var recipeTemplateFn = Handlebars.compile(recipeTemplate);
   document.getElementById('main').innerHTML = recipeTemplateFn(recipe);
 }
-
 
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
