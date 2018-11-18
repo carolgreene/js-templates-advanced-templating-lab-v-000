@@ -21,13 +21,13 @@
             <input id="description" name="description" type="text" value="{{description}}" />
           </p>
           <p>
-            <label for="ingredients">Ingredients: </label>
-            <input id="ingredients" name="ingredients" type="text"
-            <input id="ingredients" name="ingredients" type="text"
-            <input id="ingredients" name="ingredients" type="text"
-            <input id="ingredients" name="ingredients" type="text"
-            <input id="ingredients" name="ingredients" type="text"
+            {{#each ingredients}}
           </p>
+          <p>
+            <label for="ingredients">Ingredient: </label>
+            <input id="ingredient" name="ingredient" type="text" value="{{this}}" />       
+          </p>
+          {{/each}}
         </form>
       </script>
 
