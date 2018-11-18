@@ -48,7 +48,7 @@
 
   <!--Make recipe-details-partial-->
   <script id="recipe-details-partial" type="text/x-handlebars-template">
-    <p id="description">Description: </p>
+    <p id="description">{{description}}</p>
     {{#each ingredients}}
     {{ displayIngredient this}}
     {{/each}}
