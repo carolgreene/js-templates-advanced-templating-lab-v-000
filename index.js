@@ -27,7 +27,23 @@ function handleSubmit() {
   document.getElementById('main').innerHTML = recipeTemplateFn(recipe);
 }
 
-
+function displayEditForm() {
+  //set variables from form
+  let recipe = {}
+  let nameNode = document.getElementById('name');
+  let descriptionNode = document.getElementById('description');
+  let ingredientNodes = document.getElementsByName('ingredients');
+  //set attribute values
+  recipe.name = nameNode.innerHTML;
+  recipe.description = descriptionNode.innerHTML;
+  recipe.ingredients = [];
+  for(var i = 0; i < ingredientNodes.length; i++) {
+    recipe.ingredients.push(ingredientNodes[i].innerHTML);
+  }
+  let recipeTemplate = document.getElementById('recipe-template').innerHTML;
+  let recipeTemplateFn = Handlebars.compile(recipeTemplate);
+  document.getElementById('main').innerHTML = recipeTemplateFn(recipe)
+}
 
 
 document.addEventListener("DOMContentLoaded", function(event) {
