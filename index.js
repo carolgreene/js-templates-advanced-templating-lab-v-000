@@ -12,3 +12,7 @@ Handlebars.registerHelper('displayIngredient', function(ingredient) {
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
 })
+
+function handleSubmit() {
+
+}
