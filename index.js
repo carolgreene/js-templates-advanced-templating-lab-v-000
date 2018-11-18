@@ -1,6 +1,7 @@
 function init() {
-let template = document.getElementById("recipe-form-template").innerHTML;
-let templateFn = Handlebars.compile(template);
+let formTemplate = document.getElementById("recipe-form-template").innerHTML;
+let formTemplateFn = Handlebars.compile(formTemplate);
+document.getElementById('main').innerHTML = formTemplateFn({ingredients: ['','','','','']})
 }
 
 
