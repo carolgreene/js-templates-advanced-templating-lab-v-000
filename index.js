@@ -9,9 +9,6 @@ Handlebars.registerHelper('displayIngredient', function(ingredient) {
 })
 }
 
-document.addEventListener("DOMContentLoaded", function(event) {
-  init()
-})
 
 function handleSubmit() {
   //set variables from form
@@ -30,3 +27,9 @@ function handleSubmit() {
   let recipeTemplateFn = Handlebars.compile(recipeTemplate);
   document.getElementById('main').innerHTML = recipeTemplateFn(recipe);
 }
+
+
+document.addEventListener("DOMContentLoaded", function(event) {
+  init()
+})
+
