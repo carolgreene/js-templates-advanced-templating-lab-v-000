@@ -42,7 +42,7 @@ function displayEditForm() {
   }
   let recipeFormTemplate = document.getElementById('recipe-form-template').innerHTML;
   let recipeFormTemplateFn = Handlebars.compile(recipeFormTemplate);
-  document.getElementById('main').innerHTML = recipeTemplateFn(recipe)
+  document.getElementById('main').innerHTML = recipeFormTemplateFn(recipe)
 }
 
 
