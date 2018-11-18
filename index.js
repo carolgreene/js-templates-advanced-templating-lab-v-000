@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 function handleSubmit() {
   //set variables from form
+  let recipe = {}
   let nameNode = document.getElementById('name');
   let descriptionNode = document.getElementById('description');
   let ingredientNodes = document.getElementsByName('ingredients');
