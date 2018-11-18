@@ -12,6 +12,15 @@
 
       <script id="recipe-form-template" type="text/x-handlebars-template">
         <form id="recipe-form" onsubmit="handleSubmit();return false;">
+          <p>
+            <label for="name">Name: </label>
+            <input id="name" name="name" type="text" value="{{name}}" />
+          </p>
+          <p>
+            <label for="description">Description: </label>
+            <input id="description" name="description" type="text" value="{{description}}" />
+          </p>
+            
 
   <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
   <script src="index.js"></script>
