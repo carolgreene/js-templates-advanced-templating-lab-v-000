@@ -32,4 +32,3 @@ function handleSubmit() {
 document.addEventListener("DOMContentLoaded", function(event) {
   init()
 })
-
