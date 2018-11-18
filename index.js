@@ -14,5 +14,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
 })
 
 function handleSubmit() {
-
+  //set variables from form
+  let nameNode = document.getElementById('name');
+  let descriptionNode = document.getElementById('description');
+  let ingredientNodes = document.getElementsByName('ingredients');
+  //set attribute values
+  recipe.name = nameNode.value;
+  recipe.description = descriptionNode.value;
+  recipe.ingredients = [];
+  for(var i = 0; i < ingredientNodes.length; i++) {
+    recipe.ingredients.push(ingredientNodes[i].value);
+  }
+  let recipeTemplate = document.getElementById('recipe-template').inner.HTML;
+  let recipeTemplateFn = Handlebars.compile(recipeTemplate);
+  document.getElementById('main').innerHTML = recipeTemplateFn(recipe);
 }
